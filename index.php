@@ -11,7 +11,17 @@ function __autoload($class)
 }
 
 
-$a = new Dippe\Sort\Algorithm\Selection();
+$arrToSort	= array(
+	1,5,3,8,2,5,7,9,21,3,5,26,78
+	);
 
+
+$a = new Dippe\Sort\Algorithm\Selection($arrToSort);
+
+use Dippe\Debug\Debug as Debug;
+$fasz = new Debug();
+echo ".......";
+echo Debug::getHtmlLog();
+echo Debug::getJsConsoleLog();
 
 ?>

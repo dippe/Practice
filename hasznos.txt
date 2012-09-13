@@ -1,0 +1,9 @@
+
+Algoritmusok: http://prog.berzsenyi.hu:8080/prog/View/elmelet/alg/rend/rendalg
+
+http://en.wikipedia.org/wiki/Sorting_algorithm
+
+abstract evil: http://www.javaworld.com/javaworld/jw-08-2003/jw-0801-toolbox.html?page=4
+
+interface használat (bridge pattern)
+http://en.wikipedia.org/wiki/Bridge_pattern
