@@ -1,4 +1,13 @@
 <?php
+/**
+ * Selection Algorithm
+ *
+ * Steps:
+ * 1. Find the minimum value
+ * 2. Swap it with the value in the first position
+ * 3. Repeat the steps above for the remainder of the list (the ordered items will be skipped)
+ * 
+ */
 
 namespace Dippe\Sort\Algorithm;
 
@@ -6,8 +15,6 @@ use Dippe\Debug\Debug as Debug;
 
 
 class Selection extends \Dippe\Sort\ASortBase implements \Dippe\Sort\ISortAlgorithm{
-
-	private $arrToSort	= array();
 
 	public function __construct( array $arrToSort ){
 		Debug::log( "Selection __constructor", "initialized" );

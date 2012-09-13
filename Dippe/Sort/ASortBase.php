@@ -4,15 +4,15 @@ namespace Dippe\Sort;
 
 abstract class ASortBase {
 
-	private $sortArr	= array();
 	private $stepNum	= 0;
+	private $arrToSort	= array();
 
 	public function setArray( $arr ){
-		$this->sortArr	= $arr;
+		$this->arrToSort	= $arr;
 	}
 
 	public function getArray(){
-		return $this->sortArr;
+		return $this->arrToSort;
 	}
 
 	public function getStepNum(){
