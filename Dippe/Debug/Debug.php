@@ -25,7 +25,7 @@ class Debug{
 	public static function getHtmlLog(){
 		$tmpStr	= '';
 		foreach( self::$logArr as $item ){
-			$tmpStr .= '<b>'.$item->label.' : </b>'.$item->text;
+			$tmpStr .= '<b>'.$item->label.' : </b>'.$item->text.'<br />';
 		}
 		return $tmpStr;
 	}

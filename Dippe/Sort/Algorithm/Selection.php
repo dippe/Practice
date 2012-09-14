@@ -25,11 +25,12 @@ class Selection extends \Dippe\Sort\ASortBase implements \Dippe\Sort\ISortAlgori
 		Debug::log( "Selection sort", "started" );
 
 		for ($i=0;$i<(sizeof($this->arrToSort)-1);$i++){
-			$minRef	= $this->arrToSort[$i];
+			$minRef	= $i;
 			for ($j=($i+1);$j<sizeof($this->arrToSort);$j++){
 				if ( $this->arrToSort[$j] < $this->arrToSort[$minRef] ){
 					$minRef = $j;
 				}
+				$this->stepNum++;
 			}
 			// if smaller value founded, then swap
 			if ( $this->arrToSort[$i] > $this->arrToSort[$minRef] ){
@@ -37,9 +38,11 @@ class Selection extends \Dippe\Sort\ASortBase implements \Dippe\Sort\ISortAlgori
 				$this->arrToSort[$minRef]	= $this->arrToSort[$i];
 				$this->arrToSort[$i]		= $tmp;
 			}
-			$this->stepNum++;
-			Debug::log( 'STEP '.$this->stepNum.' : ', json_encode($this->arrToSort) );
+			$this->swapNum++;
 		}
+		Debug::log( 'Sorted Arr : ', json_encode($this->arrToSort) );
+		Debug::log( 'STEPNUM ', $this->stepNum );
+		Debug::log( 'SWAPNUM ', $this->swapNum );
 	}
 
 }
