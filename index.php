@@ -16,7 +16,9 @@ $arrToSort	= array(
 	);
 
 
-$a = new Dippe\Sort\Algorithm\Selection($arrToSort);
+$sort1 = new Dippe\Sort\Algorithm\Selection($arrToSort);
+$sort1->sort();
+
 
 use Dippe\Debug\Debug as Debug;
 $fasz = new Debug();

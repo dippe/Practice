@@ -24,6 +24,22 @@ class Selection extends \Dippe\Sort\ASortBase implements \Dippe\Sort\ISortAlgori
 	public function sort(){
 		Debug::log( "Selection sort", "started" );
 
+		for ($i=0;$i<(sizeof($this->arrToSort)-1);$i++){
+			$minRef	= $this->arrToSort[$i];
+			for ($j=($i+1);$j<sizeof($this->arrToSort);$j++){
+				if ( $this->arrToSort[$j] < $this->arrToSort[$minRef] ){
+					$minRef = $j;
+				}
+			}
+			// if smaller value founded, then swap
+			if ( $this->arrToSort[$i] > $this->arrToSort[$minRef] ){
+				$tmp						= $this->arrToSort[$minRef];
+				$this->arrToSort[$minRef]	= $this->arrToSort[$i];
+				$this->arrToSort[$i]		= $tmp;
+			}
+			$this->stepNum++;
+			Debug::log( 'STEP '.$this->stepNum.' : ', json_encode($this->arrToSort) );
+		}
 	}
 
 }
